@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+    <h1>Register Here if Your not a User</h1>
+    <form class="" action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="btn" type="submit" value="Save">
+    </form>
+    <p>If you're a user</p>
+    <h2><a href="{% url 'login' %}">Login</a></h2>
+{% endblock content %}
+    

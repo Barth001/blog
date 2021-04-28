@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="blog">
+    <h2 class="blog-title">{{ post.title}}</h2>
+    <time>{{post.date_created}}</time>
+    <p class="blog-body">{{post.body}}</p>
+</div>
+
+{% if request.user == post.author %} 
+<a href="{% url 'edit' post.pk %}">Edit Blog</a>
+<a href="{% url 'delete' post.pk %}">Delete Blog</a>
+{% endif %}
+    
+
+<h2>Comments</h2>
+
+{% if not post.comments.all %}
+    <p>No comment yet</p>
+{% endif %}
+    
+
+{% for comment in post.comments.all %}
+    <article><strong>{{request.user}} at {{comment.date_created}} <br></strong>{{comment.body}}</article>
+{% endfor %}
+    
+
+<div class="comment">
+{% if request.user.is_authenticated %}
+<h2>Add comment</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Comment">
+</form>
+
+{% else %}
+    <h3>Register or Login to comment</h3>
+{% endif %}
+</div>
+
+    
+{% endblock content %}
+    

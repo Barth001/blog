@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+{% for post in post %}
+    <div class="blog">
+        <h1>hi</h1>
+        <h2 class="blog-title"><a href="">{{ post.title}} <small>{{post.date_created}}</small></a></h2>
+        <p class="blog-body"><strong>{{post.body}}</strong></p>
+        <a href="{% url 'detail' post.pk %}">Read More</a>
+    </div>
+{% endfor %}
+    
+    
+{% endblock content %}
+    

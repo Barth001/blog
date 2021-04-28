@@ -1,0 +1,76 @@
+/* GLOBAL */
+
+body {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+p {
+  font-family: cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: green;
+  border-radius: 1rem;
+}
+
+.btn:hover {
+  background-color: transparent;
+  transform: scale(1.5);
+  color: black;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.flex {
+  display: flex;
+}
+
+/* navbar */
+
+.flex {
+  background-color: #f3f3f3;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 5px;
+}
+
+.flex .flex-h1 a {
+  color: green;
+}
+
+.flex .flex-list ul {
+  display: flex;
+}
+
+.flex-list a {
+  color: green;
+  margin: 10px;
+  padding: 5px;
+}
+
+/* Register */
+
+.form h1 {
+  color: green;
+}
+
+.form .register label {
+  margin: 1px;
+  color: green;
+}

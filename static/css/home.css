@@ -1,0 +1,11 @@
+h2 {
+  color: green;
+}
+
+.blog .blog-title a {
+  color: green;
+}
+
+.blog .blog-title a:hover {
+  color: black;
+}
